@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift-latex",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Vaida12345/Swift-LaTeX.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b99b1dc583097957828cc02d4da205c00f0a1191"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (5.6.4)
+  - AsyncSwift (2.0.4)
+  - EVReflection (5.2.1):
+    - EVReflection/Core (= 5.2.1)
+  - EVReflection/Core (5.2.1)
+  - HotKey (0.1.2)
+  - SQLite.swift (0.11.6):
+    - SQLite.swift/standard (= 0.11.6)
+  - SQLite.swift/standard (0.11.6)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.6.4)
+  - AsyncSwift (~> 2.0.0)
+  - EVReflection (~> 5.2.0)
+  - HotKey
+  - SQLite.swift (~> 0.11.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AsyncSwift
+    - EVReflection
+    - HotKey
+    - SQLite.swift
+
+SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  AsyncSwift: 65775a7b32e740609b24969ece3de58723b9dc3e
+  EVReflection: e0a19517cecc9ca397d26a01ec2b649e4f6fc2c0
+  HotKey: ad59450195936c10992438c4210f673de5aee43e
+  SQLite.swift: 46d890be8601964454bd3392527f863d1b802d45
+
+PODFILE CHECKSUM: e3aa647da1362724ffddc1667ed65326daeed997
+
+COCOAPODS: 1.12.1
