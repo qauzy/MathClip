@@ -52,8 +52,6 @@ struct ContentView: View {
             Divider()
             VStack(spacing: 10) {
                 Image(base64String: updater.clip)
-//                LaTeX("Hello, $\\LaTeX$!")
-//                Image(nsImage: image ?? placeholder!)
                 Divider()
                 LaTeXView(formula: updater.result)
                 Divider()
@@ -69,11 +67,6 @@ struct ContentView: View {
                             .frame(maxHeight: 200)
                             .foregroundColor(.blue)
                             .padding()
-
-//                    TextField("",text:$updater.result).multilineTextAlignment(.leading)
-//                            .frame(maxWidth: .infinity)
-//                        .padding().font(.title)
-//                        .foregroundColor(.blue)
                     Button(action: {
                         // Closure will be called once user taps your button
                         let pasteBoard = NSPasteboard.general

@@ -4,16 +4,13 @@
 
 import Foundation
 class Utils {
-    static func capturePic() -> String? {
-        let destinationPath = "/tmp/\(UUID().uuidString).png"
+    static func capturePic() {
+//        let destinationPath = "/tmp/\(UUID().uuidString).png"
         let task = Process()
         task.launchPath = "/usr/sbin/screencapture"
-        task.arguments = ["-i", "-r", destinationPath]
+        task.arguments = ["-i", "-r","-c"]
         task.launch()
         task.waitUntilExit()
-        var notDir = ObjCBool(false)
-        return FileManager.default.fileExists(atPath: destinationPath, isDirectory: &notDir)
-                ? destinationPath
-                : nil
+        return
     }
 }

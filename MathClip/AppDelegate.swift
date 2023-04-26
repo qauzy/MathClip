@@ -59,15 +59,14 @@ class AppDelegate: NSObject, NSApplicationDelegate,ObservableObject {
     }
     @objc
     func capturePic4Txt() {
-        guard let picPath = Utils.capturePic() else {
-            return
-        }
-        
-        recognizepic(picPath: picPath)
+        Utils.capturePic()
+        recognizepic()
     }
 
-    private func recognizepic(picPath: String) {
-        let picData = try? Data(contentsOf: URL(fileURLWithPath: picPath))
+    private func recognizepic() {
+//        let picData = try? Data(contentsOf: URL(fileURLWithPath: picPath))
+        let pasteBoard = NSPasteboard.general
+        let picData = try? pasteBoard.data(forType: NSPasteboard.PasteboardType.png)
         if let base64 = picData?.base64EncodedString() {
             let recognizer = NetRecognizer()
             statusItem.image = nil
@@ -102,7 +101,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,ObservableObject {
     }
 
     @objc func togglePopover(_ sender: AnyObject?) {
-//        debugPrint("===========================")
+//
         let event = NSApp.currentEvent!
         if event.type == NSEvent.EventType.rightMouseUp {
             
